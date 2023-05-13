@@ -1,9 +1,9 @@
 from flask import Flask, abort, request, jsonify
-from database.models import setup_db
+from models import setup_db
 from flask_cors import CORS
 
-from database.models import Movie, Actor
-from auth.auth import requires_auth, AuthError
+from models import Movie, Actor
+from auth import requires_auth, AuthError
 
 
 def create_app(test_config=None):
